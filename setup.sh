@@ -22,6 +22,6 @@ ExecStart=node /etc/cheeta-panel/node/src/index.js
 [Install]
 WantedBy=multi-user.target
 " >> "/etc/systemd/system/nodescheetapanel.service"
-
+systemctl enable --now nodescheetapanel
 node /etc/cheeta-panel/node/src/index.js & disown
 exit
